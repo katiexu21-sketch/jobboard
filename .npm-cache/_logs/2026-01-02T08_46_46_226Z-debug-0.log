@@ -1,0 +1,70 @@
+0 verbose cli /Users/katiexu/.asdf/installs/nodejs/20.10.0/bin/node /Users/katiexu/.asdf/installs/nodejs/20.10.0/lib/node_modules/npm/bin/npm-cli.js
+1 info using npm@10.2.3
+2 info using node@v20.10.0
+3 timing npm:load:whichnode Completed in 1ms
+4 timing config:load:defaults Completed in 1ms
+5 timing config:load:file:/Users/katiexu/.asdf/installs/nodejs/20.10.0/lib/node_modules/npm/npmrc Completed in 0ms
+6 timing config:load:builtin Completed in 0ms
+7 timing config:load:cli Completed in 1ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:file:/Users/katiexu/Downloads/creator-job-board/.npm-cache/_cacache/tmp/git-cloneH5a6BN/.npmrc Completed in 0ms
+10 timing config:load:project Completed in 3ms
+11 timing config:load:file:/Users/katiexu/.npmrc Completed in 0ms
+12 timing config:load:user Completed in 0ms
+13 timing config:load:file:/Users/katiexu/.asdf/installs/nodejs/20.10.0/etc/npmrc Completed in 0ms
+14 timing config:load:global Completed in 0ms
+15 timing config:load:setEnvs Completed in 1ms
+16 timing config:load Completed in 8ms
+17 timing npm:load:configload Completed in 8ms
+18 timing config:load:flatten Completed in 2ms
+19 timing npm:load:mkdirpcache Completed in 0ms
+20 timing npm:load:mkdirplogs Completed in 0ms
+21 verbose title npm install
+22 verbose argv "install" "--force" "--cache" "/Users/katiexu/Downloads/creator-job-board/.npm-cache" "--prefer-offline" "false" "--prefer-online" "false" "--offline" "false" "--no-progress" "--no-save" "--no-audit" "--include" "dev" "--include" "peer" "--include" "optional" "--no-package-lock-only" "--no-dry-run"
+23 timing npm:load:setTitle Completed in 1ms
+24 timing npm:load:display Completed in 0ms
+25 verbose logfile logs-max:10 dir:/Users/katiexu/Downloads/creator-job-board/.npm-cache/_logs/2026-01-02T08_46_46_226Z-
+26 verbose logfile /Users/katiexu/Downloads/creator-job-board/.npm-cache/_logs/2026-01-02T08_46_46_226Z-debug-0.log
+27 timing npm:load:logFile Completed in 5ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 0ms
+30 warn using --force Recommended protections disabled.
+31 timing npm:load Completed in 24ms
+32 timing arborist:ctor Completed in 0ms
+33 silly logfile done cleaning log files
+34 timing idealTree:init Completed in 126ms
+35 timing idealTree:userRequests Completed in 0ms
+36 silly idealTree buildDeps
+37 timing idealTree:#root Completed in 0ms
+38 timing idealTree:buildDeps Completed in 1ms
+39 timing idealTree:fixDepFlags Completed in 0ms
+40 timing idealTree Completed in 128ms
+41 timing reify:loadTrees Completed in 132ms
+42 timing reify:diffTrees Completed in 4ms
+43 silly reify moves {}
+44 timing reify:retireShallow Completed in 0ms
+45 timing reify:rollback:createSparse Completed in 92ms
+46 timing reify:rollback:retireShallow Completed in 0ms
+47 timing command:install Completed in 320ms
+48 verbose stack Error: EPERM: operation not permitted, mkdir '/Users/katiexu/Downloads/creator-job-board/.npm-cache/_cacache/tmp/git-cloneH5a6BN/node_modules/default-browser/node_modules/path-key'
+49 verbose cwd /Users/katiexu/Downloads/creator-job-board/.npm-cache/_cacache/tmp/git-cloneH5a6BN
+50 verbose Darwin 24.6.0
+51 verbose node v20.10.0
+52 verbose npm  v10.2.3
+53 error code EPERM
+54 error syscall mkdir
+55 error path /Users/katiexu/Downloads/creator-job-board/.npm-cache/_cacache/tmp/git-cloneH5a6BN/node_modules/default-browser/node_modules/path-key
+56 error errno -1
+57 verbose Error: EPERM: operation not permitted, mkdir '/Users/katiexu/Downloads/creator-job-board/.npm-cache/_cacache/tmp/git-cloneH5a6BN/node_modules/default-browser/node_modules/path-key'
+58 error
+58 error Your cache folder contains root-owned files, due to a bug in
+58 error previous versions of npm which has since been addressed.
+58 error
+58 error To permanently fix this problem, please run:
+58 error   sudo chown -R 501:20 "/Users/katiexu/Downloads/creator-job-board/.npm-cache"
+59 verbose exit -1
+60 timing npm Completed in 486ms
+61 verbose unfinished npm timer reify 1767343606391
+62 verbose unfinished npm timer reify:createSparse 1767343606532
+63 verbose code -1
+64 error A complete log of this run can be found in: /Users/katiexu/Downloads/creator-job-board/.npm-cache/_logs/2026-01-02T08_46_46_226Z-debug-0.log
