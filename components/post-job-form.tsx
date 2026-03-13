@@ -15,18 +15,51 @@ export function PostJobForm() {
   const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
 
+  const [error, setError] = useState<string | null>(null)
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError(null)
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    const form = e.currentTarget
+    const formData = new FormData(form)
 
-    // In a real app, this would send data to an API
-    console.log("[v0] Form submitted")
+    const payload = {
+      title: formData.get("title") as string,
+      company: formData.get("company") as string,
+      category: formData.get("category") as string,
+      type: formData.get("type") as string,
+      location: formData.get("location") as string,
+      salary: formData.get("salary") as string,
+      description: formData.get("description") as string,
+      responsibilities: formData.get("responsibilities") as string,
+      requirements: formData.get("requirements") as string,
+      benefits: formData.get("benefits") as string,
+      tags: formData.get("tags") as string,
+      companyDescription: formData.get("companyDescription") as string,
+      email: formData.get("email") as string,
+    }
 
-    setIsSubmitting(false)
-    router.push("/?posted=true")
+    try {
+      const res = await fetch("/api/posts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      })
+
+      if (!res.ok) {
+        const data = await res.json()
+        setError(data.error ?? "Something went wrong. Please try again.")
+        setIsSubmitting(false)
+        return
+      }
+
+      router.push("/?posted=true")
+    } catch {
+      setError("Network error. Please try again.")
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -154,6 +187,10 @@ export function PostJobForm() {
             <Label htmlFor="email">Contact Email *</Label>
             <Input id="email" name="email" type="email" placeholder="jobs@yourcompany.com" required />
           </div>
+
+          {error && (
+            <p className="text-sm text-destructive">{error}</p>
+          )}
 
           <div className="pt-4">
             <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
