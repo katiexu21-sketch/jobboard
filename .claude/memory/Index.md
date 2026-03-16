@@ -1,7 +1,10 @@
 ---
 tags: [claude-memory, index]
 aliases: [Memory Index]
+created: 2026-03-13
+updated: 2026-03-13
 ---
+
 # Claude Memory Index
 
 Central hub for Claude's persistent memory graph.

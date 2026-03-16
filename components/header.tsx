@@ -65,7 +65,7 @@ export function Header() {
               <Link href="/post-job">post a job</Link>
             </Button>
             {/* Dev-only theme tester */}
-            <div className="hidden md:flex items-center gap-1 ml-2">
+            {process.env.NODE_ENV === 'development' && <div className="hidden md:flex items-center gap-1 ml-2">
               <select
                 aria-label="theme"
                 className="text-xs border rounded-md bg-background px-2 py-1 text-muted-foreground hover:text-foreground"
@@ -88,7 +88,7 @@ export function Header() {
                 <option value="theme-red-muted">red muted</option>
                 <option value="theme-red-rose">red rose</option>
               </select>
-            </div>
+            </div>}
           </nav>
         </div>
       </header>

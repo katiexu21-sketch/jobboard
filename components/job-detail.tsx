@@ -70,7 +70,7 @@ export function JobDetail({ job }: JobDetailProps) {
 
                 <Separator />
 
-                {job.applyUrl ? (
+                {job.applyUrl && /^https?:\/\//i.test(job.applyUrl) ? (
                   <Button asChild className="w-full" size="lg">
                     <Link href={job.applyUrl} target="_blank" rel="noopener noreferrer">
                       apply now

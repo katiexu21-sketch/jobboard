@@ -1,6 +1,9 @@
 ---
 tags: [claude-memory, category]
+created: 2026-03-13
+updated: 2026-03-13
 ---
+
 # Projects
 
 ## Notes
@@ -10,3 +13,8 @@ tags: [claude-memory, category]
 - [[Index]]
 
 - [[CreatorCareers-SecurityAudit]]
+- [[CreatorCareers-Tooling]]
+- [[CreatorCareers-Critical]]
+- [[CreatorCareers-HighPriority]]
+- [[CreatorCareers-MediumPriority]]
+- [[CreatorCareers-LowPriority]]
